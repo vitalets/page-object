@@ -1,4 +1,4 @@
-# pageobject
+# @vitalets/page-object
 [![Actions Status](https://github.com/vitalets/pageobject/workflows/autotests/badge.svg)](https://github.com/vitalets/pageobject/actions)
 [![npm](https://img.shields.io/npm/v/@vitalets/page-object.svg)](https://www.npmjs.com/package/@vitalets/page-object)
 [![license](https://img.shields.io/npm/l/@vitalets/page-object.svg)](https://www.npmjs.com/package/@vitalets/page-object)
