@@ -1,4 +1,5 @@
 # pageobject
+[![Actions Status](https://github.com/vitalets/pageobject/workflows/autotests/badge.svg)](https://github.com/vitalets/pageobject/actions)
 [![npm](https://img.shields.io/npm/v/pageobject.svg)](https://www.npmjs.com/package/pageobject)
 [![license](https://img.shields.io/npm/l/pageobject.svg)](https://www.npmjs.com/package/pageobject)
 
@@ -24,8 +25,8 @@ chat.messages.item = po`.messages li`; // => '.chat .messages li'
 
 The main power is that you can apply pseudo-selectors later in your tests:
 ```js
-chat`:disabled`             // => '.chat:disabled'
-chat.title`:focused`        // => '.chat h2:focused'
+chat`:disabled`                  // => '.chat:disabled'
+chat.title`:focused`             // => '.chat h2:focused'
 chat.messages.item`:last-child`  // => '.chat .messages li:last-child'
 ```
 
