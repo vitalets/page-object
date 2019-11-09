@@ -1,13 +1,13 @@
 # pageobject
 [![Actions Status](https://github.com/vitalets/pageobject/workflows/autotests/badge.svg)](https://github.com/vitalets/pageobject/actions)
-[![npm](https://img.shields.io/npm/v/pageobject.svg)](https://www.npmjs.com/package/pageobject)
-[![license](https://img.shields.io/npm/l/pageobject.svg)](https://www.npmjs.com/package/pageobject)
+[![npm](https://img.shields.io/npm/v/@vitalets/page-object.svg)](https://www.npmjs.com/package/@vitalets/page-object)
+[![license](https://img.shields.io/npm/l/@vitalets/page-object.svg)](https://www.npmjs.com/package/@vitalets/page-object)
 
 A library for building Page Object CSS selectors for your testing framework.
 
 ## Installation
 ```bash
-npm install -D pageobject
+npm install -D @vitalets/page-object
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ The syntax is based on [Tagged templates](https://developer.mozilla.org/en-US/do
 It makes code shorter and readable:
 
 ```js
-const po = require('pageobject');
+const po = require('@vitalets/page-object');
 
 const chat = po`.chat`;                // => '.chat'
 chat.title = po`h2`;                   // => '.chat h2'

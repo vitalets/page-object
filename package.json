@@ -1,5 +1,5 @@
 {
-  "name": "pageobject",
+  "name": "@vitalets/page-object",
   "version": "0.1.1",
   "description": "A library for building Page Object CSS selectors",
   "author": {
@@ -19,7 +19,7 @@
     "test": "mocha test/setup.js test/*.spec.js",
     "ci": "npm run lint && npm test",
     "prerelease": "npm run lint && npm test",
-    "release": "npm version $VER && npm publish",
+    "release": "npm version $VER && npm publish --access=public",
     "postrelease": "git push --follow-tags --no-verify",
     "release-patch": "VER=patch npm run release",
     "release-minor": "VER=minor npm run release"
