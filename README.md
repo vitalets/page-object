@@ -23,7 +23,7 @@ chat.messages = po`.messages`;         // => '.chat .messages'
 chat.messages.item = po`.messages li`; // => '.chat .messages li'
 ```
 
-The main power is that you can apply pseudo-selectors later in your tests:
+The main power - you can apply pseudo-selectors later in your tests:
 ```js
 chat`:disabled`                  // => '.chat:disabled'
 chat.title`:focused`             // => '.chat h2:focused'
