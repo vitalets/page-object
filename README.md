@@ -3,7 +3,7 @@
 [![npm](https://img.shields.io/npm/v/@vitalets/page-object.svg)](https://www.npmjs.com/package/@vitalets/page-object)
 [![license](https://img.shields.io/npm/l/@vitalets/page-object.svg)](https://www.npmjs.com/package/@vitalets/page-object)
 
-A library for building Page Object CSS selectors for your testing framework.
+A library for building Page Object CSS selectors for any testing framework.
 
 ## Installation
 ```bash
