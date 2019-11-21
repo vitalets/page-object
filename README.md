@@ -12,7 +12,7 @@ npm install -D @vitalets/page-object
 
 ## Usage
 The syntax is based on [Tagged templates](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates).
-It makes code shorter and readable:
+It makes code short and readable:
 
 ```js
 const po = require('@vitalets/page-object');
