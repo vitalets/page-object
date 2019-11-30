@@ -13,27 +13,35 @@ npm install -D @vitalets/page-object
 ## Usage
 The syntax is based on [Tagged templates](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates).
 It makes code short and readable:
-
 ```js
 const po = require('@vitalets/page-object');
 
-const chat = po`.chat`;                // => '.chat'
-chat.title = po`h2`;                   // => '.chat h2'
-chat.messages = po`.messages`;         // => '.chat .messages'
-chat.messages.item = po`.messages li`; // => '.chat .messages li'
+const chat = po`.chat`;                                 // => '.chat'
+chat.title = chat` h2`;                                 // => '.chat h2'
+chat.messages = chat` .messages`;                       // => '.chat .messages'
+chat.messages.item = chat.messages` li`;                // => '.chat .messages li'
+chat.messages.focusedItem = chat.messages.item`:focus`; // => '.chat .messages li:focus'
 ```
 
-The main power - you can apply pseudo-selectors later in your tests:
+You can also attach selectors dynamically in tests:
 ```js
-chat`:disabled`                  // => '.chat:disabled'
-chat.title`:focused`             // => '.chat h2:focused'
-chat.messages.item`:last-child`  // => '.chat .messages li:last-child'
+await page.click(chat.messages.item`:focus`);
 ```
 
-Even several extra pseudo-selectors in one line:
+## Converting to string
+Any created page-object is actually a function - this is required for tagged templates.
+If you pass page-object to `console.log`, you will not get just a string,
+because `console.log` does not call `toString()` method automatically:
 ```js
-chat`:disabled`.messages.item`:last-child` // => '.chat:disabled .messages li:last-child'
+console.log(chat.title); // => { [Function: ".chat h2"] toJSON: [Function], toString: [Function] }
 ```
+Although there is a selector in function name that is useful for debugging.
+
+To explicitly convert page-object to string - call it as a function without arguments:
+```js
+console.log(chat.title()); // => '.chat h2'
+```
+
 
 ## License
 MIT @ [Vitaliy Potapov](https://github.com/vitalets)
